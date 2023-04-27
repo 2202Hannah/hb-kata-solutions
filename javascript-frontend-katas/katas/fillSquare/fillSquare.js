@@ -1,14 +1,19 @@
 // Please do not change the name of this function
 const fillSquare = arr => {
-
   // REFACTOR IDEA manually iterating could improve efficiency as the current code iterates over the array multiple times (map, mex, indexOf, additional loops...)
 
-  const square = [];
   const lengths = arr.map(array => array.length);
   const maxLength = lengths[lengths.indexOf(Math.max(...lengths))];
+  const square = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length === maxLength) {
+  for (let i = 0; i < maxLength; i++) {
+    if (i >= arr.length) {
+      const a = [];
+      for (let j = 0; j < maxLength; j++) {
+        a.push(null);
+      }
+      square.push(a);
+    } else if (arr[i].length === maxLength) {
       square.push(arr[i]);
     } else {
       const a = [];
@@ -21,6 +26,7 @@ const fillSquare = arr => {
       square.push(a);
     }
   }
+  console.log(square);
   return square;
 };
 
