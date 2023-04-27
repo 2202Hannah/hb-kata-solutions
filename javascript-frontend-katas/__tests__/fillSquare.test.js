@@ -18,4 +18,16 @@ describe("fillSquare()", () => {
       ]
     );
   });
+  it("returns an array of a 6x6 square where the array is longer than the max sub array", () => {
+    expect(fillSquare([[1, 2, 3], [1, 2, 3], [1], [], [1, 2, 3], [1]])).toEqual(
+      [
+        [1, 2, 3, null, null, null],
+        [1, 2, 3, null, null, null],
+        [1, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [1, 2, 3, null, null, null],
+        [1, null, null, null, null, null]
+      ]
+    );
+  });
 });
