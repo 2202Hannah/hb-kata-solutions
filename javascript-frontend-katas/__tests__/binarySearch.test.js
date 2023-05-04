@@ -11,4 +11,9 @@ describe("binarySearch()", () => {
     const array = [2, 3, 4];
     expect(binarySearch(number, array)).toBe(0);
   });
+  it("returns 1 when the number is the second item in the array", () => {
+    const number = 3;
+    const array = [2, 3, 4];
+    expect(binarySearch(number, array)).toBe(1);
+  });
 });
