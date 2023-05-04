@@ -18,4 +18,11 @@ You can assume that the array passed to the function will always be ordered and 
 ### Food for thought
 
 - Think about how this algorithm compares to searching on element at a time in order. Which one is faster and, more importantly, how much faster is it?
+
+ANSWER: The main advantage of binary search is that it is much quicker than a serial search because the data that needs to be search halves with each step. Binary seach is like a divide and conquer technique. The average case time complexity of binary search is O(logN)
+
 - Is there a way to approximately determine how many "bisections" it would take to find a number based on the length of the array?
+
+ANSWER: arrayLength = 2^n
+        
+        where n is equal to the number of comparisons, or bisections, needed to locate the number. 
