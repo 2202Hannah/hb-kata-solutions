@@ -6,4 +6,9 @@ describe("binarySearch()", () => {
     const array = [2, 3, 4];
     expect(binarySearch(number, array)).toBe(-1);
   });
+  it("returns 0 when the number is the first item in the array", () => {
+    const number = 2;
+    const array = [2, 3, 4];
+    expect(binarySearch(number, array)).toBe(0);
+  });
 });
