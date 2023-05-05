@@ -19,7 +19,7 @@ const parseHexInt = str => {
     f: 15
   };
 
-  const arr = str.split("");
+  const arr = str.split("").reverse();
   let num = 0;
 
   arr.forEach((element, index) => {
