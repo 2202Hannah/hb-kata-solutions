@@ -12,6 +12,8 @@ To read more about the Hexadecimal numerical system, see some of the following l
 
 [Why do we use Hexadecimal numbers?](https://medium.com/@savas/why-do-we-use-hexadecimal-d6d80b56f026)
 
+ANSWER: We can see hexadecimal numbers used in programming, for example to denote colour in the hex scheme. Hexadecimal has better readability than binary code. We can use 2 hexidecimal digits to express any number from 0 to 255. In binary we would need 8 digits. We don't use decimal as even though it is the most readable to humans it never lines up exactly with binary. Any system we use to compress binary data should have a base that is a multiple of 2. 
+
 ## Your task
 
 You should complete the `parseHexInt` function **without** recourse to any of the native JavaScript number manipulation functions such as `parseInt`! Research how hex numbers work and how to manually convert between the hexadecimal and decimal systems.
