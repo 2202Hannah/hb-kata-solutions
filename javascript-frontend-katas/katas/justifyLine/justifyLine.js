@@ -1,13 +1,7 @@
 // Please do not change the name of this function
 const justifyLine = (str, maxLineLength) => {
-  if (str.length > maxLineLength) {
-    return "String exceeds maximum line length.";
-  }
-
-  let extraSpace = maxLineLength - str.length;
   const arr = str.split("");
-
-  const whitespaceAdder = (arr, extraSpace) => {
+  const whitespaceAdder = (arr, extraSpace = maxLineLength - str.length) => {
     arr.forEach((element, i) => {
       if (extraSpace > 0 && element.includes(" ")) {
         arr[i] += " ";
@@ -15,14 +9,14 @@ const justifyLine = (str, maxLineLength) => {
       }
     });
 
-    if (extraSpace > 0) {
-      whitespaceAdder(arr, extraSpace);
-    } else return arr;
+    return extraSpace > 0 ? whitespaceAdder(arr, extraSpace) : arr;
   };
 
-  whitespaceAdder(arr, extraSpace);
+  whitespaceAdder(arr);
 
-  return arr.join("");
+  return str.length > maxLineLength
+    ? "String exceeds maximum line length."
+    : arr.join("");
 };
 
 module.exports = { justifyLine };
