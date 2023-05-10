@@ -10,4 +10,12 @@ describe("justifyLine()", () => {
     const str = "foo foo foo foo";
     expect(justifyLine(str, 16)).toBe("foo  foo foo foo");
   });
+  it("adds an additional space between the all words when the max line length is 3 more than the string length", () => {
+    const str = "foo foo foo foo";
+    expect(justifyLine(str, 18)).toBe("foo  foo  foo  foo");
+  });
+  it("adds more spaces between each word when larger white space buffers are required", () => {
+    const str = "foo foo foo foo";
+    expect(justifyLine(str, 20)).toBe("foo   foo   foo  foo");
+  });
 });

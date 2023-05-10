@@ -7,12 +7,20 @@ const justifyLine = (str, maxLineLength) => {
   let extraSpace = maxLineLength - str.length;
   const arr = str.split("");
 
-  arr.forEach((element, i) => {
-    if (extraSpace > 0 && element === " ") {
-      arr[i] += " ";
-      extraSpace--;
-    }
-  });
+  const whitespaceAdder = (arr, extraSpace) => {
+    arr.forEach((element, i) => {
+      if (extraSpace > 0 && element.includes(" ")) {
+        arr[i] += " ";
+        extraSpace--;
+      }
+    });
+
+    if (extraSpace > 0) {
+      whitespaceAdder(arr, extraSpace);
+    } else return arr;
+  };
+
+  whitespaceAdder(arr, extraSpace);
 
   return arr.join("");
 };
