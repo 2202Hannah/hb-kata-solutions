@@ -1,6 +1,6 @@
 // Please do not change the name of this function
-const wrongWayCow = (field) => {
-  // Your code here
-}
+const wrongWayCow = field => {
+  return [];
+};
 
-module.exports = { wrongWayCow }
+module.exports = { wrongWayCow };
