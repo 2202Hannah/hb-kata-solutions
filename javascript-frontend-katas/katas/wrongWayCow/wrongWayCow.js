@@ -1,14 +1,14 @@
 // Please do not change the name of this function
 const wrongWayCow = field => {
-  const arr = field.split(`\n`);
-  const arr2 = [];
+  const fieldArray = field.split(`\n`);
+  const cowArray = [];
   const coordinateArray = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    arr2.push(arr[i].match(/.{3}/g));
+  for (let i = 0; i < fieldArray.length; i++) {
+    cowArray.push(fieldArray[i].match(/.{3}/g));
   }
 
-  arr2.forEach((line, index) => {
+  cowArray.forEach((line, index) => {
     let cowCounter = 0;
     let wocCounter = 0;
     line.forEach((cow, i) => {
