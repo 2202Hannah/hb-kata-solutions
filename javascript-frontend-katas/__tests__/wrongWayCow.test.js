@@ -15,4 +15,8 @@ describe("wrongWayCow()", () => {
     const field = 'cowcowcowcow\n......cowcow\n............\n...cow...woc'
     expect(wrongWayCow(field)).toEqual([3, 3]);
   });
+  it("will return an empty array when multiple lines of cows are all facing same way or empty space", () => {
+    const field = 'cowcowcow...\n...cowcowcow\n............'
+    expect(wrongWayCow(field)).toEqual([]);
+  });
 });
