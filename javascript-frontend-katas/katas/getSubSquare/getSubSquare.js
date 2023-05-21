@@ -14,9 +14,10 @@ const getSubSquare = (matrix, xStartIndex, yStartIndex) => {
     yStartIndex >= matrix.length - 2
   ) {
     errorMessage = "Subsquare exceeds the bounds of the matrix";
-  } else for (let i = xStartIndex; i < xStartIndex + 3; i++) {
-    arr.push(matrix[i].slice(yStartIndex, yStartIndex + 3));
-  }
+  } else
+    for (let i = yStartIndex; i < yStartIndex + 3; i++) {
+      arr.push(matrix[i].slice(xStartIndex, xStartIndex + 3));
+    }
 
   return errorMessage ? errorMessage : arr;
 };
