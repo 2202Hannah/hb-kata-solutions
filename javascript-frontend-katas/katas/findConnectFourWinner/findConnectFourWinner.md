@@ -41,8 +41,8 @@ const board = [
   [null, null, null, null, null, null, null],
   [null, null, 'o', null, null, null, null],
   [null, null, 'o', null, null, null, null],
-  [null, 'x', 'o', 'x', null, null, null],
-  [null, 'x', 'o', 'x', null, null, null]
+  [null, null, 'o', null, null, null, null],
+  [null, null, 'o', null, null, null, null]
 ];
 
 findConnectFourWinner(board); --> 'o'
