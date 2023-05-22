@@ -11,7 +11,12 @@ describe('checkDiagonalWinner()', () => {
     expect(checkDiagonalWinner(board)).toBe(false)
   });
   it('returns false when there is no diagonal winner', () => {
-    const board = fillSquare([[], [], [], [], [], ['x','x','x','x', null, null, null], []])
+    const board = fillSquare([[], [], [], [], [], ['x','x','x','x'], []])
+    board.pop()
+    expect(checkDiagonalWinner(board)).toBe(false)
+  });
+  it('returns false when there is no diagonal winner', () => {
+    const board = fillSquare([[], [], [null, 'o'], [null, 'o'], [null, 'o'], [null, 'o'], []])
     board.pop()
     expect(checkDiagonalWinner(board)).toBe(false)
   });
