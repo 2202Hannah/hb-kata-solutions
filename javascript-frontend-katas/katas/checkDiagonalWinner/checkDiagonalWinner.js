@@ -7,6 +7,7 @@ const checkDiagonalWinner = board => {
     row.forEach((slot, i) => {
       if (slot !== null) {
         gamePlayArray.push(`${slot} ${index + i}`);
+        gamePlayArray.push(`${slot} ${index - i}`);
       }
     });
   });

@@ -28,7 +28,7 @@ describe("checkDiagonalWinner()", () => {
     board.pop();
     expect(checkDiagonalWinner(board)).toBe(false);
   });
-  it("returns x when there x is the diagonal winner", () => {
+  it("returns x when x is the diagonal winner", () => {
     const board = fillSquare([
       [],
       [],
@@ -40,5 +40,18 @@ describe("checkDiagonalWinner()", () => {
     ]);
     board.pop();
     expect(checkDiagonalWinner(board)).toBe("x");
+  });
+  it("returns o when o is the diagonal winner", () => {
+    const board = fillSquare([
+      [],
+      [],
+      [null, null, "o"],
+      [null, null, null, "o"],
+      [null, null, null, null, "o"],
+      [null, null, null, null, null, "o"],
+      []
+    ]);
+    board.pop();
+    expect(checkDiagonalWinner(board)).toBe("o");
   });
 });
