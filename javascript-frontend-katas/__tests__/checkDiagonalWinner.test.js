@@ -28,7 +28,7 @@ describe("checkDiagonalWinner()", () => {
     board.pop();
     expect(checkDiagonalWinner(board)).toBe(false);
   });
-  it("returns x when x is the diagonal winner", () => {
+  it("returns x when x is the diagonal winner (positive diagonal)", () => {
     const board = fillSquare([
       [],
       [],
@@ -41,7 +41,7 @@ describe("checkDiagonalWinner()", () => {
     board.pop();
     expect(checkDiagonalWinner(board)).toBe("x");
   });
-  it("returns o when o is the diagonal winner", () => {
+  it("returns o when o is the diagonal winner (negative diagonal)", () => {
     const board = fillSquare([
       [],
       [],
@@ -53,5 +53,17 @@ describe("checkDiagonalWinner()", () => {
     ]);
     board.pop();
     expect(checkDiagonalWinner(board)).toBe("o");
+  });
+  it("returns an error message when the board matrix is not the correct dimensions", () => {
+    const board = fillSquare([
+      [],
+      [],
+      [null, null, "o"],
+      [null, null, null, "o"],
+      [null, null, null, null, "o"],
+      [null, null, null, null, null, "o"],
+      []
+    ]);
+    expect(checkDiagonalWinner(board)).toBe("Please provide a 7 * 6 matrix");
   });
 });

@@ -1,5 +1,11 @@
 // Please do not change the name of this function
 const checkDiagonalWinner = board => {
+  // first check the board is the correct size
+
+  if (board.length !== 6 || board[0].length !== 7) {
+    return "Please provide a 7 * 6 matrix";
+  }
+
   const gamePlayArray = [];
   let returnValue = false;
 
