@@ -1,8 +1,8 @@
 // Please do not change the name of this function
 function changeCalculator(num) {
   let changeLeft = num;
-  const divide = (changeLeft, y) => {
-    return Math.floor(changeLeft / y);
+  const divide = (changeLeft, coinAmount) => {
+    return Math.floor(changeLeft / coinAmount);
   };
   const changeObj = {};
 
