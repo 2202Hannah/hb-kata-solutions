@@ -2,7 +2,6 @@ const dnaPairs = require("../dna-pairs.js");
 
 describe("dnaPairs()", () => {
   test("When passed an empty string it should return an empty array", () => {
-    // add your test assertion(s) here
     const dna = "";
     const result = dnaPairs(dna);
     expect(result).toEqual([]);
