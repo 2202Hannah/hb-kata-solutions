@@ -1,15 +1,15 @@
 // Please do not change the name of this function
 function calculateDivisors(num) {
-  let total = 0;
+  let totalSumOfDivisors = 0;
   for (let i = num - 1; i > 0; i--) {
     if (i % 3 === 0) {
-      total += i;
+      totalSumOfDivisors += i;
     }
     if (i % 5 === 0) {
-      total += i;
+      totalSumOfDivisors += i;
     }
   }
-  return total;
+  return totalSumOfDivisors;
 }
 
 module.exports = calculateDivisors;
